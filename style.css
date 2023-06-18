@@ -6,16 +6,31 @@ body{
     font-family: Luminari, fantasy, sans-serif;
     text-align: center;
     height: 100vh;
+    width: 100%;
 }
 
 .header{
-    width: 100%;
     background-color: darkslateblue;
+    height: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.header__nav__list{
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
 .main{
     background-color: gray;
     flex-grow: 2;
 }
+
 .footer{
     background-color: chocolate;
 }
