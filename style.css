@@ -3,10 +3,19 @@ body{
     padding: 0;
     display: flex;
     flex-direction: column;
+    font-family: Luminari, fantasy, sans-serif;
+    text-align: center;
+    height: 100vh;
 }
 
 .header{
     width: 100%;
     background-color: darkslateblue;
-    text-align: center;
+}
+.main{
+    background-color: gray;
+    flex-grow: 2;
+}
+.footer{
+    background-color: chocolate;
 }
