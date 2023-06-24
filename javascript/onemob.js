@@ -21,27 +21,52 @@ const itemDisplayed = async() => {
     nameElement.textContent = data.name
 
     const divImageElement = document.createElement('div')
-    divImageElement.className = "image-content"
+    divImageElement.className = "image-content-mobs"
     divImageElement.id = "image"
 
     const imageElement = document.createElement('img')
     imageElement.src = data.image
     imageElement.alt = data.name
+    imageElement.className = "item__img"
 
     const descriptionElement = document.createElement('cite')
     descriptionElement.textContent = data.description
 
-    
+    const divFlexElement = document.createElement("div")
+    divFlexElement.id = "div-flex"
+    divFlexElement.className = "flex-content"
 
+    const drops = data.drops
+
+    const dropsList = document.createElement("ul")
+    dropsList.id = "drop-list"
+
+
+    for( let drop of drops) {
+        const dropElement = document.createElement("li")
+        dropElement.innerText = drop
+        dropsList.appendChild(dropElement)
+    }
+
+    const locations = data.location.split(",")
+    console.log(locations)
+
+    const locationsList = document.createElement("ul")
+    locations.id = "location-list"
+
+    for( let location of locations) {
+        const locationElement = document.createElement("li")
+        locationElement.textContent = location
+        locationsList.appendChild(locationElement)
+    }
 
     document.getElementById("mob").appendChild(nameElement)
     document.getElementById("mob").appendChild(divImageElement)
     document.getElementById("image").appendChild(imageElement)
+    document.getElementById("mob").appendChild(divFlexElement)
+    document.getElementById("div-flex").appendChild(dropsList)
+    document.getElementById("div-flex").appendChild(locationsList)
     document.getElementById("mob").appendChild(descriptionElement)
-
-    
-
-
 }
 
 itemDisplayed()
