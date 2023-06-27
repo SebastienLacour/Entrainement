@@ -45,6 +45,7 @@ a{
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .content{
@@ -90,6 +91,7 @@ a{
     background-color: black;
     color: darkgoldenrod;
     margin-bottom: 20px;
+    position: relative;
 }
 
 .image-content{
@@ -132,6 +134,13 @@ a{
     border: solid 2px darkgoldenrod;
     border-collapse: collapse;
     width: 80px;
+}
+
+.description{
+    display: block;
+    width: 70%;
+    position: absolute;
+    bottom: 7%;
 }
 
 .footer{

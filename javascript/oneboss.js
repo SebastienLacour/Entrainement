@@ -63,6 +63,7 @@ const itemsDisplay = async() => {
 
     const descriptionElement = document.createElement("cite")
     descriptionElement.innerText = dataDisplayed.description
+    descriptionElement.className = "description"
 
     TextContainer.appendChild(nameElement)
     TextContainer.appendChild(imageContainer)
